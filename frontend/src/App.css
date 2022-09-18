@@ -1,0 +1,24 @@
+.rm-from-cart-btn{
+    color: #abb8c3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.rm-from-cart-btn:hover{
+    filter: brightness(0.65);
+    transform: scale(1.1,1.1);
+}
+.rm-from-cart-admin-btn{
+    color: rgba(211, 47, 47, 0.7);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.rm-from-cart-admin-btn:hover{
+    color: rgba(211, 47, 47, 1);
+    transform: scale(1.1,1.1);
+}
+
+@media screen and (max-width: 550px) {
+    .section-titles{
+        font-size: 1.5rem;
+    }
+}

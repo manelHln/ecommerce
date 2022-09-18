@@ -1,0 +1,9 @@
+export { default as Header } from "./header/Header";
+export { default as Navbar } from "./navbar/Navbar";
+export { default as BestSeller } from "./bestseller/BestSeller";
+export { default as Services } from "./services/Services";
+export { default as NewsLetter } from "./newsletter/newsletter";
+export { default as Footer } from "./footer/Footer";
+export { default as Categories } from "./categories/Categories";
+export { default as Sidebar } from "./sidebar/Sidebar";
+export { default as BackToTop } from "./backToTop/BackToTop";

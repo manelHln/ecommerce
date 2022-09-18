@@ -1,0 +1,38 @@
+.btn-transition{
+    font-size: 2rem;
+    animation-name: fadeUp;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+}
+
+.btn-transition:nth-child(2){
+    animation-duration: 0.6s;
+}
+
+.add-btn-transition:active{
+    animation-name: fadeRight;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+}
+
+@keyframes fadeUp {
+    from{
+        opacity: 0;
+        bottom: -20px;
+    }
+    to{
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+@keyframes fadeRight {
+    from{
+        opacity: 1;
+        right: 0;
+    }
+    to{
+        opacity: 0;
+        right: 50px;
+    }
+}
