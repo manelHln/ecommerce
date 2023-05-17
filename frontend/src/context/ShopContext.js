@@ -1,42 +1,25 @@
-import { createContext, useReducer, useContext } from "react";
+import { createContext, useReducer, useContext, useEffect } from "react";
 import shopReducer, { initialState } from "./ShopReducer";
 
 const ShopContext = createContext(initialState);
-const useShop = () => {
-  const context = useContext(ShopContext);
 
-  if (context === undefined) {
-    throw new Error("useShop must be within ShopContext");
-  }
-
-  return context;
-};
-
-export const ShopProvider = ({ children }) => {
+const ShopProvider = ({ children }) => {
   const [state, dispatch] = useReducer(shopReducer, initialState);
 
   const addToCart = (product) => {
-    const updatedCart = state.products.concat(product);
-    updatePrice(updatedCart);
-
     dispatch({
       type: "ADD_TO_CART",
       payload: {
-        products: updatedCart,
+        product,
       },
     });
   };
 
   const removeFromCart = (product) => {
-    const updatedCart = state.products.filter(
-      (currentProduct) => currentProduct.name !== product.name
-    );
-    updatePrice(updatedCart);
-
     dispatch({
       type: "REMOVE_FROM_CART",
       payload: {
-        products: updatedCart,
+        product,
       },
     });
   };
@@ -52,14 +35,40 @@ export const ShopProvider = ({ children }) => {
       },
     });
   };
+
+  const deleteProduct = (product) => {
+    dispatch({
+      type: "DELETE_FROM_CART",
+      payload: {
+        product,
+      },
+    });
+  }
+
+  // Update total price when products change
+  useEffect(() => {
+    updatePrice(state.products);
+  }, [state.products]);
+
   const value = {
     total: state.total,
     products: state.products,
     addToCart,
     removeFromCart,
+    deleteProduct
   };
 
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
 };
 
-export default useShop;
+const useShop = () => {
+  const context = useContext(ShopContext);
+
+  if (context === undefined) {
+    throw new Error("useShop must be within ShopContext");
+  }
+
+  return context;
+};
+
+export { ShopProvider, useShop };

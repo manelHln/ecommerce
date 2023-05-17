@@ -39,15 +39,6 @@ const SingleProduct = () => {
             volutpat.
           </p>
           <div className="single-product-input">
-            <input
-              type="number"
-              step="1"
-              min="0"
-              title="Qty"
-              inputMode="numeric"
-              autoComplete="off"
-              style={qtyInputStyle}
-            />
             <Button variant="outlined" startIcon={<RiShoppingBasket2Line />}>
               Add to cart
             </Button>

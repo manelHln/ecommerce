@@ -18,31 +18,36 @@ import {
   RiShoppingBasket2Line,
 } from "react-icons/ri";
 import "./navbar.css";
+import { useShop } from "../../context/ShopContext";
 
-const Links = () => {
+const Links = ({handleClick}) => {
   return (
       <ul className="navbar-links">
-        <li>
-          <Link to="/" >Home</Link>
+        <li onClick={handleClick}>
+          <Link to="/" >Accueil</Link>
         </li>
-        <li>
-          <Link to="/shop">Shop</Link>
+        <li onClick={handleClick}>
+          <Link to="/shop">Boutique</Link>
         </li>
-        <li>
-          <Link to="/about">About Us</Link>
+        <li onClick={handleClick}>
+          <Link to="/about">A propos</Link>
         </li>
-        <li>
-          <Link to="/contact">Contact Us</Link>
+        <li onClick={handleClick}>
+          <Link to="/contact">Nous contacter</Link>
         </li>
-        <li>
-          <Link to="/account">Account</Link>
+        <li onClick={handleClick}>
+          <Link to="/account">Mon compte</Link>
         </li>
       </ul>     
   );
 };
 
 export default function Navbar() {
-  const [toggleMenu, setToggleMenuState] = React.useState(false);
+  const [toggleMenu, setToggleMenuState] = useState(false);
+  const { products} = useShop()
+  const handleClick = () => {
+    setToggleMenuState(false)
+  }
 
   return (
     <div className="navbar-container">
@@ -51,20 +56,20 @@ export default function Navbar() {
         {toggleMenu && (
           <div>
             <RiCloseLine size={27} onClick={() => setToggleMenuState(false)} />
-            <Links />
+            <Links handleClick={handleClick} />
           </div>
         )}
       </div>
 
       <div className="logo">
-        <p>.myShop</p>
+        <p>.biboShop</p>
       </div>
 
       <div className="navbar-links-container">
         <Links />
         <div>
         <IconButton style={{ marginRight: "0" }}>
-          <Badge badgeContent={5} color="primary">
+          <Badge badgeContent={products.length} color="primary" showZero>
             <Link to={"../checkout"}>
               <RiShoppingBasket2Line size={25} color="black" />
             </Link>
@@ -75,7 +80,7 @@ export default function Navbar() {
 
       <div className="mobile-cart">
         <IconButton style={{ marginRight: "0" }}>
-          <Badge badgeContent={5} color="primary">
+          <Badge badgeContent={products.length} color="primary">
             <Link to={"../checkout"}>
               <RiShoppingBasket2Line size={25} color="black" />
             </Link>

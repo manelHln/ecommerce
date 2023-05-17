@@ -1,4 +1,10 @@
-import {BestSeller, Header, NewsLetter, Services, Categories} from "../components";
+import {
+  BestSeller,
+  Header,
+  Services,
+  Categories,
+  NewsLetter,
+} from "../components";
 import Latests from "../components/latests/Latests";
 
 function Home() {

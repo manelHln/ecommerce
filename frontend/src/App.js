@@ -18,7 +18,7 @@ function App() {
         <Route path="contact" element={<ContactUs />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="dashboard" element={<Dashboard/>} />
-        <Route path="product" element={<SingleProductPage />} />
+        <Route path="product/:id" element={<SingleProductPage />} />
       </Routes>
       <BackToTop />
       <Footer />

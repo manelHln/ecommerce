@@ -11,7 +11,7 @@ const path = require('path')
 
 const port = process.env.PORT;
 
-connectDB()
+connectDB().catch(console.dir)
 
 app.use('/uploads',express.static(path.join(__dirname, 'uploads')))
 app.use(cors)

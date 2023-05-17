@@ -1,6 +1,6 @@
 import { Container } from "@mui/system";
 import { Paper, Typography, Button, TextField } from "@mui/material";
-import "./newsletter.css"
+import "./newsletter.css";
 
 export default function NewsLetter() {
   const formStyle = {
@@ -25,12 +25,15 @@ export default function NewsLetter() {
       >
         <Typography
           variant="h3"
-          mb={4}
+          mb={2}
           fontFamily="var(--logo-font)"
           color="black"
           className="newsletter-title"
         >
-          Subscribe today and get a discount up to 30% off!
+          Ne manquez plus aucune de nos offres!
+        </Typography>
+        <Typography variant="h5" mb={4} fontFamily="var(--logo-font)">
+          Inscrivez vous a notre newsletter aujourd'hui
         </Typography>
         <form style={formStyle} className="newsletter-form">
           <TextField

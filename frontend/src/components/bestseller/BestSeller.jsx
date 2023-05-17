@@ -11,7 +11,7 @@ export default function BestSeller() {
         my={5}
         style={{ fontFamily: "var(--logo-font)" }}
       >
-        <Divider textAlign="right" className="section-titles">Best Sellers</Divider>
+        <Divider textAlign="right" className="section-titles">Produits Populaires</Divider>
       </Typography>
       <Grid container spacing={5}>
         {AllProducts.map((product, index) => {
