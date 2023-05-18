@@ -16,6 +16,13 @@
     margin: .8rem 0;
     text-transform: capitalize;
 }
+
+.footer-container .footer-links div ul li a{
+    color: #fff;
+}
+.footer-container .footer-links div ul li a:hover{
+    color: #aba4a4;
+}
 .footer-links .footer-logo{
     cursor: pointer;
     margin-bottom: .2rem;

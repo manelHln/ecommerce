@@ -1,5 +1,6 @@
 import { Container } from "@mui/system";
 import { Paper, Typography, Button, TextField } from "@mui/material";
+import {newsletter_img} from "../../images/Images"
 import "./newsletter.css";
 
 export default function NewsLetter() {
@@ -17,7 +18,7 @@ export default function NewsLetter() {
           textAlign: "center",
           m: 5,
           position: "relative",
-          background: "url('assets/pictures/Wall39.png')",
+          background: newsletter_img,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -43,7 +44,7 @@ export default function NewsLetter() {
             variant="outlined"
           />
           <Button type="submit" variant="contained" className="newsletter-btn">
-            Subscribe
+            Souscrire
           </Button>
         </form>
       </Paper>

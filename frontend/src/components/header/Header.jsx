@@ -1,11 +1,12 @@
 import React from "react";
 import { RiShoppingBasket2Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { hero_bg } from "../../images/Images";
 import "./header.css";
 
 export default function Header() {
   return (
-      <div className="header-container">
+      <div className="header-container" style={{backgroundImage: `url(${hero_bg})`}}>
         <div>
           <p className="header-title">
             Autumn

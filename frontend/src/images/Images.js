@@ -26,3 +26,7 @@ export { default as product21 } from "./products/p21.png";
 export { default as product22 } from "./products/p22.png";
 export { default as logo } from "./logo_biboshop.jpeg";
 export { default as emptyCart } from "./empty_cart.jpg"
+export { default as newsletter_img } from "./newsletter.jpg"
+export { default as our_role } from "./our_role.jpg"
+export { default as why_choose_us } from "./why-choose-us.jpg"
+export { default as hero_bg } from "./hero-background.jpg"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { RiFacebookLine, RiInstagramLine, RiWhatsappLine } from 'react-icons/ri';
+import { Link } from "react-router-dom";
 import './footer.css';
 
 const Footer = () => {
@@ -10,8 +11,8 @@ const Footer = () => {
     <div className='footer-container'>
       <div className='footer-links'>
         <div className='logo-container'>
-          <h2 className='footer-logo'>.myShop</h2>
-          <p>Crechterwoord K12 182 DK Alknjkcb, All Rights Reserved</p>
+          <h2 className='footer-logo'>.biboShop</h2>
+          <p>Cotonou Benin, tous droits reserves</p>
           <div className='social-medias'>
             <RiFacebookLine size={35} className="icon" />
             <RiWhatsappLine size={35} className="icon" />
@@ -19,33 +20,26 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h4>Links</h4>
+          <h4>A propos de nous</h4>
           <ul>
-            <li>Overon</li>
-            <li>social media</li>
-            <li>counters</li>
-            <li>contact</li>
+            <li><Link to="">a propos</Link>
+              </li>
+            <li><Link to="">termes et conditions</Link></li>
+            <li><Link to="">politique de confidentialite</Link></li>
+            <li><Link to="">contact</Link></li>
           </ul>
         </div>
         <div>
-          <h4>Company</h4>
+          <h4>Contact</h4>
           <ul>
-            <li>terms and conditions</li>
-            <li>privacy and policy</li>
-            <li>contact</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Get in touch</h4>
-          <ul>
-            <li>Somewhere in the world</li>
+            <li>Cotonou Benin</li>
             <li>985-532168</li>
             <li>john@doe.me</li>
           </ul>
         </div>
       </div>
       <div className='copyright'>
-        <p>© {year} .MyShop All rights reserved.</p>
+        <p>© {year} Contact Developper</p>
       </div>
     </div>
   )

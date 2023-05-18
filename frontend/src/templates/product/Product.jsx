@@ -71,7 +71,7 @@ export default function Product({ product }) {
               fontWeight: 600,
             }}
           >
-            {product.price}$
+            {product.price} FCFA
           </Typography>
         </Grid>
         <Grid container justifyContent="center" mb={2}>

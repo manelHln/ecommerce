@@ -43,7 +43,7 @@ const AddToCartButton = ({product}) => {
           startIcon={<RiShoppingBasket2Line />}
           onClick={handleButtonState}
         >
-          Add to cart
+          Ajouter au panier
         </Button>
       )}
     </div>

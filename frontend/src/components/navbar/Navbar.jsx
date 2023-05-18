@@ -10,7 +10,7 @@ import {
   Tooltip,
 } from "@mui/material";
 import React, { useState, useReducer } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   RiMenu3Line,
   RiCloseLine,
@@ -24,19 +24,19 @@ const Links = ({handleClick}) => {
   return (
       <ul className="navbar-links">
         <li onClick={handleClick}>
-          <Link to="/" >Accueil</Link>
+          <NavLink to="/" >Accueil</NavLink>
         </li>
         <li onClick={handleClick}>
-          <Link to="/shop">Boutique</Link>
+          <NavLink to="/shop">Boutique</NavLink>
         </li>
         <li onClick={handleClick}>
-          <Link to="/about">A propos</Link>
+          <NavLink to="/about">A propos</NavLink>
         </li>
         <li onClick={handleClick}>
-          <Link to="/contact">Nous contacter</Link>
+          <NavLink to="/contact">Nous contacter</NavLink>
         </li>
         <li onClick={handleClick}>
-          <Link to="/account">Mon compte</Link>
+          <NavLink to="/account">Mon compte</NavLink>
         </li>
       </ul>     
   );
@@ -70,9 +70,9 @@ export default function Navbar() {
         <div>
         <IconButton style={{ marginRight: "0" }}>
           <Badge badgeContent={products.length} color="primary" showZero>
-            <Link to={"../checkout"}>
+            <NavLink to={"../checkout"}>
               <RiShoppingBasket2Line size={25} color="black" />
-            </Link>
+            </NavLink>
           </Badge>
         </IconButton>
       </div>
@@ -81,9 +81,9 @@ export default function Navbar() {
       <div className="mobile-cart">
         <IconButton style={{ marginRight: "0" }}>
           <Badge badgeContent={products.length} color="primary">
-            <Link to={"../checkout"}>
+            <NavLink to={"../checkout"}>
               <RiShoppingBasket2Line size={25} color="black" />
-            </Link>
+            </NavLink>
           </Badge>
         </IconButton>
       </div>

@@ -1,7 +1,6 @@
 import "./latest.css";
 import { StarRateRounded } from "@mui/icons-material";
-import { Paper, Grid, Typography, Button, Icon } from "@mui/material";
-import { RiShoppingBasket2Line } from "react-icons/ri";
+import { Paper, Grid, Typography, Icon } from "@mui/material";
 import AddToCartButton from "../AddToCartButton";
 import { Link } from "react-router-dom";
 
@@ -24,7 +23,7 @@ export default function Latest({product}) {
           </Grid>
           <Grid item mx={3} mt={2}>
             <Typography variant="p" className="typography" fontWeight={600}>
-              ${product.price}
+              {product.price} FCFA
             </Typography>
           </Grid>
         </Grid>
@@ -54,7 +53,7 @@ export default function Latest({product}) {
 
           <Grid item mx={3}>
             <Typography variant="body2" className="typography">
-              <Link to={`../product/${product.id}`}>View</Link>
+              <Link to={`../product/${product.id}`}>Voir produit</Link>
             </Typography>
           </Grid>
         </Grid>

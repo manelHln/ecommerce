@@ -39,6 +39,14 @@
   font-weight: 500;
   display: flex;
   align-items: center;
+  transition: all .3s ease;
+}
+.navbar-container .navbar-links-container .navbar-links li a:hover{
+  color: var(--primary-color);
+}
+.navbar-container a.active{
+  color: var(--primary-color) !important;
+  font-weight: 600 !important;
 }
 .navbar-container .navbar-links-container .navbar-links li a svg {
   margin-right: 0.2rem;

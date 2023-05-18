@@ -10,6 +10,7 @@ export default function BestSeller() {
         variant="h3"
         my={5}
         style={{ fontFamily: "var(--logo-font)" }}
+        color="primary"
       >
         <Divider textAlign="right" className="section-titles">Produits Populaires</Divider>
       </Typography>

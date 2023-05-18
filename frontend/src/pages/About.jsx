@@ -1,7 +1,7 @@
 import { Grid, Typography, Divider } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
-import { product19, product20, product21 } from "../images/Images";
+import { product19, our_role, why_choose_us } from "../images/Images";
 
 function About() {
   const imageStyle = {
@@ -63,7 +63,7 @@ function About() {
         </Typography>
         <Grid container spacing={2} mb={5}>
           <Grid item xs={12} md={6}>
-            <img src={product20} alt="our story" style={imageStyle} />
+            <img src={why_choose_us} alt="our story" style={imageStyle} />
           </Grid>
           <Grid item xs={12} md={6}>
             <Typography variant="body1" sx={paragraphStyle}>
@@ -107,7 +107,7 @@ function About() {
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
-            <img src={product21} alt="our story" style={imageStyle} />
+            <img src={our_role} alt="our story" style={imageStyle} />
           </Grid>
         </Grid>
       </Container>

@@ -8,7 +8,7 @@ export default function Latests() {
     console.log(AllProducts)
   return (
     <Container maxWidth="lg" spacing={5}>
-      <Typography variant="h3" my={5} className="latests-heading">
+      <Typography variant="h3" my={5} className="latests-heading" color="primary">
         <Divider textAlign="left" className="section-titles">
           Nouvel arrivage
         </Divider>
