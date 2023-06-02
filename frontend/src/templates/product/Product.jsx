@@ -1,17 +1,10 @@
 import { StarRateRounded } from "@mui/icons-material";
-import { Grid, Paper, Typography, Icon, Button } from "@mui/material";
+import { Grid, Paper, Typography, Icon } from "@mui/material";
 import AddToCartButton from "../AddToCartButton";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import {useNavigate} from "react-router-dom"
 
 export default function Product({ product }) {
-  // useEffect(() => {
-  //     const fetchProduct = async () => {
-  //         const product = await axios.get("http://localhost:8800/api/products/629f70544dedb947aa0ac4c8");
-  //         console.log(product);
-  //     };
-  //     fetchProduct();
-  // },[]);
+  const navigate = useNavigate()
 
   return (
     // <Grid item xs={12} md={6} lg={4} mb={3}>
@@ -25,6 +18,7 @@ export default function Product({ product }) {
           height: "15rem",
           objectFit: "cover",
         }}
+        onClick={()=> navigate(`/product/${product["_id"]}`)}
       />
       <Grid
         container

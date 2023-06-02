@@ -1,5 +1,4 @@
 .btn-transition{
-    font-size: 2rem;
     animation-name: fadeUp;
     animation-duration: 0.3s;
     animation-timing-function: ease-in-out;

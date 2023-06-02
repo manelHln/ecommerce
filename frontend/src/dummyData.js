@@ -1,4 +1,8 @@
 import * as images from "./images/Images";
+import { IoMdAnalytics } from "react-icons/io";
+import { FiUsers } from "react-icons/fi";
+import { BsCart4 } from "react-icons/bs";
+import { RiArticleLine } from "react-icons/ri";
 
 export const AllProducts = [
   {
@@ -7,8 +11,9 @@ export const AllProducts = [
     price: 150,
     image: images.product1,
     category: "Men",
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
-    qty: 0
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
+    qty: 0,
   },
   {
     id: 2,
@@ -16,8 +21,9 @@ export const AllProducts = [
     price: 75,
     image: images.product10,
     category: "Women",
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
-    qty: 0
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
+    qty: 0,
   },
   {
     id: 3,
@@ -25,8 +31,9 @@ export const AllProducts = [
     price: 50,
     image: images.product11,
     category: "",
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
-    qty: 0
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
+    qty: 0,
   },
   {
     id: 4,
@@ -34,8 +41,9 @@ export const AllProducts = [
     price: 25,
     image: images.product12,
     category: "",
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
-    qty: 0
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
+    qty: 0,
   },
   {
     id: 5,
@@ -43,8 +51,9 @@ export const AllProducts = [
     price: 40,
     image: images.product13,
     category: "",
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
-    qty: 0
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam",
+    qty: 0,
   },
   {
     id: 6,
@@ -53,7 +62,7 @@ export const AllProducts = [
     image: images.product14,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 7,
@@ -62,7 +71,7 @@ export const AllProducts = [
     image: images.product15,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 8,
@@ -71,7 +80,7 @@ export const AllProducts = [
     image: images.product16,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 9,
@@ -80,7 +89,7 @@ export const AllProducts = [
     image: images.product17,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 10,
@@ -89,7 +98,7 @@ export const AllProducts = [
     image: images.product18,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 11,
@@ -98,7 +107,7 @@ export const AllProducts = [
     image: images.product19,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 12,
@@ -107,7 +116,7 @@ export const AllProducts = [
     image: images.product20,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 13,
@@ -116,7 +125,7 @@ export const AllProducts = [
     image: images.product21,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 14,
@@ -125,7 +134,7 @@ export const AllProducts = [
     image: images.product22,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 15,
@@ -134,7 +143,7 @@ export const AllProducts = [
     image: images.product2,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 16,
@@ -143,7 +152,7 @@ export const AllProducts = [
     image: images.product3,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 17,
@@ -152,7 +161,7 @@ export const AllProducts = [
     image: images.product4,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 18,
@@ -161,7 +170,7 @@ export const AllProducts = [
     image: images.product5,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 19,
@@ -170,7 +179,7 @@ export const AllProducts = [
     image: images.product6,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 20,
@@ -179,7 +188,7 @@ export const AllProducts = [
     image: images.product7,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 21,
@@ -188,7 +197,7 @@ export const AllProducts = [
     image: images.product8,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
   },
   {
     id: 22,
@@ -197,6 +206,29 @@ export const AllProducts = [
     image: images.product9,
     category: "",
     description: "",
-    qty: 0
+    qty: 0,
+  },
+];
+
+export const navConfig = [
+  {
+    title: "dashboard",
+    path: "/dashboard/app",
+    icon: <IoMdAnalytics />,
+  },
+  {
+    title: "user",
+    path: "/dashboard/users",
+    icon: <FiUsers />,
+  },
+  {
+    title: "product",
+    path: "/dashboard/products",
+    icon: <BsCart4 />,
+  },
+  {
+    title: "blog",
+    path: "/dashboard/blog",
+    icon: <RiArticleLine />,
   },
 ];

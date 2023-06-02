@@ -26,20 +26,34 @@
 }
 .navbar-container .navbar-links-container .navbar-links li {
   font-family: var(--text-font);
-  font-size: 1.1rem;
+  font-size: .9rem;
   text-transform: capitalize;
   list-style-type: none;
   margin-right: 1rem;
   display: flex;
   align-items: center;
 }
-.navbar-container .navbar-links-container .navbar-links li a {
+
+.show-on-mobile{
+  display: none !important;
+}
+
+.show-on-desktop{
+  display: flex;
+}
+
+.navbar-container .navbar-links-container .navbar-links li a, .navbar-container button a {
   text-decoration: none;
   color: #000;
   font-weight: 500;
   display: flex;
   align-items: center;
   transition: all .3s ease;
+}
+
+.navbar-container button a{
+  color: var(--primary-color);
+  font-weight: 600;
 }
 .navbar-container .navbar-links-container .navbar-links li a:hover{
   color: var(--primary-color);
@@ -147,4 +161,13 @@
   .navbar-container{
     padding: .7rem 2rem;
   }
+
+  .show-on-mobile{
+    display: flex !important;
+  }
+  
+  .show-on-desktop{
+    display: none !important;
+  }
+
 }

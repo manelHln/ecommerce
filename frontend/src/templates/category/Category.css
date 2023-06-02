@@ -4,7 +4,14 @@
   border-radius: 5px;
   object-fit: cover;
 }
-.category-icons {
+
+/* .category-footer p {
+  padding: 0.4rem 1rem;
+  background-color: #fff;
+  cursor: pointer
+} */
+
+.category-icons, .category-footer {
   position: absolute;
   top: 0;
   left: 0;
@@ -20,7 +27,7 @@
   justify-content: center;
   align-items: center;
 }
-.category-icons:hover {
+.category-icons:hover, .category-footer:hover {
   opacity: 1;
 }
 .category-icon {
@@ -53,10 +60,15 @@
   background-color: #fff;
   top: 0px;
   left: 0;
+  text-transform: uppercase;
+}
+
+.category-footer button a{
+  color: #fff;
 }
 
 @media screen and (max-width : 750px) {
-  .category-icons{
+  .category-icons, .category-footer{
     opacity: 1;
   }
 }

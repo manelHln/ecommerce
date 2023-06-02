@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import "./font-awesome/css/font-awesome.min.css"
 import './index.css';
 import App from './App';
+// import AdminPanel from './AdminPanel';
+
 
 ReactDOM.render(
   <BrowserRouter>

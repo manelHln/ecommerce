@@ -1,10 +1,9 @@
 import "./latest.css";
-import { StarRateRounded } from "@mui/icons-material";
-import { Paper, Grid, Typography, Icon } from "@mui/material";
+import { Paper, Grid, Typography, Rating } from "@mui/material";
 import AddToCartButton from "../AddToCartButton";
 import { Link } from "react-router-dom";
 
-export default function Latest({product}) {
+export default function Latest({product, key}) {
   return (
     <Grid item md={4} sm={6} xs={12}>
       <Paper variant="outlined" square>
@@ -34,26 +33,12 @@ export default function Latest({product}) {
 
         <Grid container justifyContent="space-between" alignItems="center">
           <Grid item mx={3}>
-            <Icon>
-              <StarRateRounded sx={{ color: "var(--star-color)" }} />
-            </Icon>
-            <Icon>
-              <StarRateRounded sx={{ color: "var(--star-color)" }} />
-            </Icon>
-            <Icon>
-              <StarRateRounded sx={{ color: "var(--star-color)" }} />
-            </Icon>
-            <Icon>
-              <StarRateRounded sx={{ color: "var(--star-color)" }} />
-            </Icon>
-            <Icon>
-              <StarRateRounded sx={{ color: "var(--star-color)" }} />
-            </Icon>
+            <Rating value={5} />
           </Grid>
 
           <Grid item mx={3}>
             <Typography variant="body2" className="typography">
-              <Link to={`../product/${product.id}`}>Voir produit</Link>
+              <Link to={`../product/${product["_id"]}`}>Voir produit</Link>
             </Typography>
           </Grid>
         </Grid>

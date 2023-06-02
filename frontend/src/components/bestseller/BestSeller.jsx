@@ -1,9 +1,8 @@
 import { Divider, Grid, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import Product from "../../templates/product/Product";
-import { AllProducts } from "../../dummyData";
 
-export default function BestSeller() {
+export default function BestSeller({AllProducts}) {
   return (
     <Container>
       <Typography

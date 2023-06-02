@@ -1,39 +1,119 @@
-import React from "react";
-import { FaTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import "./contactUs.css"
+import "./contactUs.css";
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import { Container } from "@mui/material";
+import { ContactUsImage } from "../../images/Images";
 
-const ContactUs = () => {
+export default function SignInSide() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get("email"),
+      password: data.get("password"),
+    });
+  };
+
   return (
-    <div className="contactus-container">
-      <div className="contactus">
-        <div className="contactus-section-one">
-          <h2>We're here</h2>
-          <p>Our door is always open for all of your queries</p>
-          <h3>Our office</h3>
-          <div className="contactus-address">
-            <p>New york</p>
-            <p>Street 123</p>
-            <p>United state of America 🇺🇸</p>
-          </div>
-          <div className="contactus-icons">
-            <FaTwitter />
-            <FaInstagram />
-            <FaWhatsapp />
-          </div>
-        </div>
-        <div className="contactus-section-two">
-          <h2>Let's talk.</h2>
-          <p>Lorem ipsum dolor sit amet consectetur</p>
-          <form action="">
-            <input type="text" placeholder="Full name" />
-            <input type="text" placeholder="Email" />
-            <textarea placeholder="Message" />
-            <div className="contactus-btn">Send</div>
-          </form>
-        </div>
-      </div>
-    </div>
+    <Container component="main" maxWidth="lg">
+      <Box
+        sx={{
+          marginTop: 8,
+          marginBottom: 10,
+        }}
+      >
+        <Grid container>
+          <CssBaseline />
+          <Grid
+            item
+            xs={false}
+            sm={4}
+            md={7}
+            sx={{
+              backgroundImage: `url(${ContactUsImage})`,
+              backgroundRepeat: "no-repeat",
+              backgroundColor: (t) =>
+                t.palette.mode === "light"
+                  ? t.palette.grey[50]
+                  : t.palette.grey[900],
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+          <Grid
+            item
+            xs={12}
+            sm={8}
+            md={5}
+            component={Paper}
+            elevation={6}
+            square
+          >
+            <Box
+              sx={{
+                my: 8,
+                mx: 4,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <div className="contactus-section-two">
+                <h2>Ecrivez-nous</h2>
+                <p>Nous repondons a vos message en moins d'une heure!</p>
+                <Box
+                  component="form"
+                  noValidate
+                  onSubmit={handleSubmit}
+                  sx={{ mt: 1 }}
+                >
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    label="Nom et Prenom(s)"
+                    name="fName"
+                    autoFocus
+                  />
+                  <TextField
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email Address"
+                    name="email"
+                    autoComplete="email"
+                    autoFocus
+                  />
+                  <TextField
+                    rows={3}
+                    multiline
+                    margin="normal"
+                    required
+                    fullWidth
+                    label="Votre message"
+                    name="message"
+                    autoFocus
+                  />
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    size="large"
+                    fullWidth
+                    sx={{ marginTop: "10px" }}
+                  >
+                    Envoyer
+                  </Button>
+                </Box>
+              </div>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+    </Container>
   );
-};
-
-export default ContactUs;
+}
