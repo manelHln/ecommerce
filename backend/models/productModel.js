@@ -8,11 +8,13 @@ const productSchema = new mongoose.Schema(
     },
     price: { type: Number, required: [true, "The product must have a price"] },
     desc: String,
-    category: String,
+    category: { type: Array, default: [] },
     image: {
       type: String,
       required: [true, "You must set an image as a preview of your product"],
     },
+    gallery: { type: Array, default: []},
+    videoTutorials: { type: Array, default: []},
     reviews: { type: Number },
   },
   {

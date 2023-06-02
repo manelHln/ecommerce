@@ -25,7 +25,7 @@ function About() {
           style={{ fontFamily: "var(--logo-font)" }}
         >
           <Divider textAlign="left" className="section-titles">
-            Our Story
+            Notre Passion
           </Divider>
         </Typography>
         <Grid container spacing={2} mb={5}>
@@ -57,8 +57,8 @@ function About() {
           my={5}
           style={{ fontFamily: "var(--logo-font)" }}
         >
-          <Divider textAlign="center" className="section-titles">
-            Why Choose Us
+          <Divider textAlign="right" className="section-titles">
+            Pourquoi nous choisir?
           </Divider>
         </Typography>
         <Grid container spacing={2} mb={5}>
@@ -78,36 +78,6 @@ function About() {
               Chez BiBo Shop, nous sommes là pour vous aider à simplifier votre
               vie.
             </Typography>
-          </Grid>
-        </Grid>
-
-        <Typography
-          variant="h3"
-          color="primary"
-          my={5}
-          style={{ fontFamily: "var(--logo-font)" }}
-        >
-          <Divider textAlign="right" className="section-titles">
-            Our Roles
-          </Divider>
-        </Typography>
-        <Grid container spacing={2} mb={5}>
-          <Grid item xs={12} md={6}>
-            <Typography variant="body1" sx={paragraphStyle}>
-              Nous travaillons constamment pour ajouter de nouveaux produits à
-              notre gamme afin de répondre aux besoins de nos clients. Nous
-              sommes convaincus que vous trouverez chez nous le gadget parfait
-              pour faciliter votre vie quotidienne. Nous offrons également un
-              excellent service client et une livraison rapide, pour que vous
-              puissiez profiter rapidement de vos nouveaux gadgets. Explorez
-              notre site web pour découvrir tous nos produits et n'hésitez pas à
-              nous contacter si vous avez des questions ou des commentaires.
-              Chez BiBo Shop, nous sommes là pour vous aider à simplifier votre
-              vie.
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <img src={our_role} alt="our story" style={imageStyle} />
           </Grid>
         </Grid>
       </Container>

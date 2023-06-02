@@ -1,5 +1,4 @@
 import React from 'react'
-import {AiOutlineArrowUp} from "react-icons/ai"
 import {HiArrowCircleUp} from "react-icons/hi"
 import "./backToTop.css"
 

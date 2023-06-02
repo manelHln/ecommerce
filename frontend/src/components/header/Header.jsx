@@ -6,21 +6,25 @@ import "./header.css";
 
 export default function Header() {
   return (
-      <div className="header-container" style={{backgroundImage: `url(${hero_bg})`}}>
-        <div>
-          <p className="header-title">
-            Autumn
-            <br /> Collection
-          </p>
-          <p className="header-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </p>
-          <Link to="../shop">
-            <div className="header-btn">
-              Shop now <RiShoppingBasket2Line size={25} />
-            </div>
-          </Link>
-        </div>
+    <div
+      className="header-container"
+      style={{ backgroundImage: `url(${hero_bg})` }}
+    >
+      <div className="header-content">
+        <div id="overlay"></div>
+        <p className="header-title">
+          Offres incroyables sur une large gamme de produits
+        </p>
+        <p className="header-text">
+          Ne les manquez pas! Des cadeaux pour tous Parcourez notre sélection de
+          produits et trouvez le cadeau parfait
+        </p>
+        <Link to="../shop">
+          <div className="header-btn">
+            Achetez maintenant <RiShoppingBasket2Line size={25} />
+          </div>
+        </Link>
       </div>
+    </div>
   );
 }

@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
 import {
   BestSeller,
   Header,
@@ -8,11 +10,24 @@ import {
 import Latests from "../components/latests/Latests";
 
 function Home() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_API_ENV}products`)
+      .then((response) => {
+        if (response.status === 200) {
+          setProducts(response.data);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <div>
       <Header />
-      <Latests />
-      <BestSeller />
+      <Latests AllProducts={products} />
+      <BestSeller AllProducts={products} />
       <Services />
       <NewsLetter />
       <Categories />

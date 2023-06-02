@@ -1,4 +1,4 @@
-import { createContext, useReducer, useContext, useEffect } from "react";
+import { createContext, useReducer, useContext } from "react";
 import shopReducer, { initialState } from "./ShopReducer";
 
 const ShopContext = createContext(initialState);
@@ -24,18 +24,6 @@ const ShopProvider = ({ children }) => {
     });
   };
 
-  const updatePrice = (products) => {
-    let total = 0;
-    products.forEach((product) => (total += product.price));
-
-    dispatch({
-      type: "UPDATE_PRICE",
-      payload: {
-        total,
-      },
-    });
-  };
-
   const deleteProduct = (product) => {
     dispatch({
       type: "DELETE_FROM_CART",
@@ -45,14 +33,9 @@ const ShopProvider = ({ children }) => {
     });
   }
 
-  // Update total price when products change
-  useEffect(() => {
-    updatePrice(state.products);
-  }, [state.products]);
 
   const value = {
-    total: state.total,
-    products: state.products,
+    products: state,
     addToCart,
     removeFromCart,
     deleteProduct

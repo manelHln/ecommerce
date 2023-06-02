@@ -42,22 +42,6 @@
     gap: 5px;
 }
 
-.contactus-section-two form{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 1rem;
-}
-
-.contactus-section-two form input, .contactus-section-two form textarea{
-    padding: .4rem;
-    font-size: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-}
-
-.contactus-section-two form input:focus, .contactus-section-two form textarea:focus{
-    outline: none;
-}
 
 .contactus-btn{
     padding: .7rem;

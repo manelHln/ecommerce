@@ -1,6 +1,6 @@
 import { Container } from "@mui/system";
 import { Paper, Typography, Button, TextField } from "@mui/material";
-import {newsletter_img} from "../../images/Images"
+import { newsletter_img } from "../../images/Images";
 import "./newsletter.css";
 
 export default function NewsLetter() {
@@ -18,7 +18,9 @@ export default function NewsLetter() {
           textAlign: "center",
           m: 5,
           position: "relative",
-          background: newsletter_img,
+          // background:
+          //   "linear-gradient(90deg, rgba(0,122,255,1) 15%, rgba(0,95,255,0.8407738095238095) 64%)",
+          background: `url("/assets/pictures/Wall39.png")`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
